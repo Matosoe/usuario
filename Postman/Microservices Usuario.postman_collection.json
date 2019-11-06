@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "f78724f2-de7a-456e-820b-7f05c003178e",
+		"name": "Microservices Usuario",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Lista Usuários",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuario/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario",
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista Usuário por Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuario/usuario/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario",
+						"usuario",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista Usuário por e-mail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuario/usuarios/a@b.c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario",
+						"usuarios",
+						"a@b.c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cria Usuário",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"emailUsuario\": \"a@b.cd\",\n        \"nomeUsuario\": \"Eduardo Matoso 8 - proprietário\",\n        \"senhaUsuario\": \"456\"\n    }\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuario/usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario",
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualiza Usuário",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"idUsuario\": 11,\r\n        \"emailUsuario\": \"a@b.c\",\r\n        \"nomeUsuario\": \"Eduardo Matoso - proprietário\",\r\n        \"senhaUsuario\": \"456\"\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuario/usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario",
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deleta Usuário",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n      \"idUsuario\": 8\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuario/usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario",
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "1bc10528-35d4-43dd-b5a1-352ab03adbf9",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "65e795db-bb26-405a-a149-fad7f28b6df2",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
